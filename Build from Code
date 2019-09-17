@@ -1,0 +1,27 @@
+1.  I recomment creating a clean build environment:
+
+    mkdir build
+    cd build/
+    
+2.  Run cmake to configure the build environment and then make to build:
+    
+    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+    make
+    
+3.  To install, use make install
+
+    sudo make install
+
+4.  Download prebuild binairy from the folder "Downloadables" in this rep
+
+5.  Install it by coping file to wingpanel plugin folder as below.
+
+    sudo cp libweather.so /usr/lib/x86_64-linux-gnu/wingpanel/libweather.so
+    pkill -9 wingpanel
+
+6.  Get secret key from https://darksky.net/dev/login?next=/account and store it in your config file:
+    
+    cat ~/.weather.config
+    {
+        "key":"XXXXXXXXXXXXXXXXXXXX"
+    }
